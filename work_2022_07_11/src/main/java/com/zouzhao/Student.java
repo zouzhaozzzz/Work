@@ -1,8 +1,13 @@
 package com.zouzhao;
 
+import com.alibaba.excel.annotation.ExcelProperty;
+
 public class Student {
+    @ExcelProperty(value = "姓名",index = 0)
     String name;
+    @ExcelProperty(value = "性别",index = 1)
     String sex;
+    @ExcelProperty(value = "年龄",index = 2)
     int age;
 
     public Student() {
