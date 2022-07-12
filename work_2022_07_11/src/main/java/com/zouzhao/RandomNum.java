@@ -14,7 +14,6 @@ public class RandomNum {
         randomStudent(100000);
 
 
-
     }
 
     private static void randomStudent(int n) {
@@ -83,7 +82,7 @@ public class RandomNum {
         double countSex = 0;
         double countAge1 = 0, countAge2 = 0;
         for (int i = 0; i < length; i++) {
-            if (students[i].sex.equals("male") ) countSex++;
+            if (students[i].sex.equals("male")) countSex++;
             if (students[i].age >= 18 && students[i].age < 20) countAge1++;
             else if (students[i].age >= 20 && students[i].age < 25) countAge2++;
         }
@@ -91,7 +90,7 @@ public class RandomNum {
 
 
         //导出学生集合后时间
-        Date date3= new Date();
+        Date date3 = new Date();
         String dateStr3 = simpleDateFormat.format(date3);
 
         //实现excel写的操作
@@ -102,19 +101,19 @@ public class RandomNum {
         EasyExcel.write(filename, Student.class).sheet("学生列表").doWrite(getData(students));
 
         //导出学生集合后时间
-        Date date4= new Date();
+        Date date4 = new Date();
         String dateStr4 = simpleDateFormat.format(date4);
 
-        System.out.println("生成学生集合前时间："+dateStr1);
-        System.out.println("生成学生集合后时间："+dateStr2);
-        System.out.println("导出学生集合前时间："+dateStr3);
-        System.out.println("导出学生集合后时间："+dateStr4);
+        System.out.println("生成学生集合前时间：" + dateStr1);
+        System.out.println("生成学生集合后时间：" + dateStr2);
+        System.out.println("导出学生集合前时间：" + dateStr3);
+        System.out.println("导出学生集合后时间：" + dateStr4);
     }
-
 
 
     /**
      * 返回学生list集合
+     *
      * @param students
      * @return 学生list集合
      */
