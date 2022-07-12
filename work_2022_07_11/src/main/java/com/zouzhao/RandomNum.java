@@ -37,12 +37,12 @@ public class RandomNum {
             //设置性别
             while (true) {
                 String sex = rdSex();
-                if (sex == "male" && sexMCount / length < 0.5) {
+                if (sex.equals("male") && sexMCount / length < 0.5) {
                     students[i].setSex(sex);
                     sexMCount++;
                     break;
                 }
-                if (sex == "female" && sexFCount / length < 0.5) {
+                if (sex.equals("female") && sexFCount / length < 0.5) {
                     students[i].setSex(sex);
                     sexFCount++;
                     break;
@@ -83,7 +83,7 @@ public class RandomNum {
         double countSex = 0;
         double countAge1 = 0, countAge2 = 0;
         for (int i = 0; i < length; i++) {
-            if (students[i].sex == "male") countSex++;
+            if (students[i].sex.equals("male") ) countSex++;
             if (students[i].age >= 18 && students[i].age < 20) countAge1++;
             else if (students[i].age >= 20 && students[i].age < 25) countAge2++;
         }
@@ -97,7 +97,7 @@ public class RandomNum {
         //实现excel写的操作
         //1 设置写入文件夹地址和excel文件名称 没有的话会自动创建
         String filename = "D:\\java111\\123\\work\\student.xlsx";
-        //2 调用easyexcel里面的方法实现写操作
+        //2 调用easyExcel里面的方法实现写操作
         //write方法两个参数：第一个参数文件路径名称，第二个参数实体类class
         EasyExcel.write(filename, Student.class).sheet("学生列表").doWrite(getData(students));
 
@@ -107,7 +107,7 @@ public class RandomNum {
 
         System.out.println("生成学生集合前时间："+dateStr1);
         System.out.println("生成学生集合后时间："+dateStr2);
-        System.out.println("导出学生集合后时间："+dateStr3);
+        System.out.println("导出学生集合前时间："+dateStr3);
         System.out.println("导出学生集合后时间："+dateStr4);
     }
 
@@ -116,7 +116,7 @@ public class RandomNum {
     /**
      * 返回学生list集合
      * @param students
-     * @return
+     * @return 学生list集合
      */
     private static List<Student> getData(Student[] students) {
         List<Student> list = new ArrayList<>();
