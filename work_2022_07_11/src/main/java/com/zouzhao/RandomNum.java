@@ -55,17 +55,16 @@ public class RandomNum {
                     students[i].setAge(age);
                     age1++;
                     break;
-                } else if (age2 / length < 0.5 && age >= 20 && age < 25) {
+                } else if (age >= 20 && age < 25 && age2 / length < 0.5) {
                     students[i].setAge(age);
                     age2++;
                     break;
-                } else if (age3 / length < 0.3 && (age < 18 || age >= 25)) {
+                } else if ((age < 18 || age >= 25)&&age3 / length < 0.3 ) {
                     students[i].setAge(age);
                     age3++;
                     break;
                 }
-
-            }
+            }//while
 
         }//for
 
@@ -117,7 +116,7 @@ public class RandomNum {
      * @param students
      * @return 学生list集合
      */
-    private static List<Student> getData(Student[] students) {
+    public static List<Student> getData(Student[] students) {
         List<Student> list = new ArrayList<>();
         for (int i = 0; i < students.length; i++) {
             Student student = new Student();
