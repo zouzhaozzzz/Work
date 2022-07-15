@@ -8,6 +8,7 @@ public class TestEmployee {
         for (Employee employee : employees) {
             System.out.println(employee.getSalary(month));
         }
+
     }
 
 }

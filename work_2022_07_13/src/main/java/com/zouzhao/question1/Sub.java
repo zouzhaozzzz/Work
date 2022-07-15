@@ -7,12 +7,18 @@ public class Sub extends Super {
     }
 
     public Sub(int i) {
-       this();
+//       this();
+//        super(i);
+        super(i);
         System.out.println("Sub(int)");
     }
 
-    public Sub(String str) {
-        System.out.println("Sub(String)");
+    public void method(){
+        System.out.println("methodSub");
     }
+
+//    public Sub(String str) {
+//        System.out.println("Sub(String)");
+//    }
 }
 
