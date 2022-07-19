@@ -17,7 +17,6 @@ public class Worker {
 
     public void work(){
     }
-    public void work(int hours){}
 
     public void setAddr(String address,String zipCode) {
        addr=new Address(address,zipCode);

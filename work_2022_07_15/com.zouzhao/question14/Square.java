@@ -6,7 +6,7 @@ public class Square extends Rect {
        super(length, length);
 
     }
-
+    @Override
     public double area() {
         return super.area();
     }
