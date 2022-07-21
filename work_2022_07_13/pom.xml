@@ -14,6 +14,14 @@
             <version>4.12</version>
             <scope>compile</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.openjdk.jol</groupId>
+            <artifactId>jol-core</artifactId>
+            <version>0.16</version>
+            <!-- 这里注意，从maven仓库复制过来的代码记得把下面这行注释掉 -->
+            <!--<scope>provided</scope>-->
+        </dependency>
     </dependencies>
 
 
