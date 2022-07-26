@@ -4,11 +4,11 @@ import java.io.*;
 
 public class TestData {
     public static void main(String[] args) throws IOException {
-        File file = new File("test.dat");
+        File file = new File("test.txt");
         long data = 0 ;
         if(file.exists()){
             //读出来+1
-            DataInputStream in = new DataInputStream(new FileInputStream("test.dat"));
+            DataInputStream in = new DataInputStream(new FileInputStream("test.txt"));
             data = in.readLong();
             data++;
             in.close();
@@ -16,7 +16,7 @@ public class TestData {
             data = 10000L;
         }
         //写
-        DataOutputStream out = new DataOutputStream(new FileOutputStream("test.dat"));
+        DataOutputStream out = new DataOutputStream(new FileOutputStream("test.txt"));
         out.writeLong(data);
         out.close();
         System.out.println(data);
